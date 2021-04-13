@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OpenInWhatsapp">
         <activity android:name=".MainActivity"
-            android:theme="Transparent">
+            android:theme="@style/Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
