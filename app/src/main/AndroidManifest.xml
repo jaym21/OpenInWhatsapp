@@ -15,6 +15,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+<!--            making intent filter to have an option to open this app-->
+            <intent-filter>
+<!--                action is taken as PROCESS_TEXT to have an option to open app when a text is selected-->
+                <action android:name="android.intent.action.PROCESS_TEXT" />
+                <category android:name="android.intent.category.DEFAULT" />
+<!--                data is set as plain text type-->
+                <data android:mimeType="text/plain" />
+            </intent-filter>
         </activity>
     </application>
 
