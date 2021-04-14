@@ -1,5 +1,6 @@
 package dev.jaym.openinwhatsapp
 
+import android.content.ComponentName
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -54,25 +55,10 @@ class MainActivity : AppCompatActivity() {
         //making use of whatsapp api format
         intentWhatsApp.data = Uri.parse("https://wa.me/$data")
 
-        //checking if whatsapp is available on device
-//        if (isWhatsAppAvailable()) {
-            //if it is present then starting the intent to opening number in whatsapp
-            startActivity(intentWhatsApp)
-//        }else {
-//            //if it is not present on device
-//            Toast.makeText(this, "WhatsApp not available on device", Toast.LENGTH_LONG).show()
-//        }
+        //starting the intent to open number in whatsapp
+        startActivity(intentWhatsApp)
+
+        finish()
     }
-//
-//    private fun isWhatsAppAvailable(): Boolean {
-//    var isAvailable: Boolean
-//    try {
-//            packageManager.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES)
-//            isAvailable = true
-//        }catch (e: PackageManager.NameNotFoundException) {
-//            isAvailable = false
-//        }
-//
-//    return isAvailable
-//    }
+
 }
